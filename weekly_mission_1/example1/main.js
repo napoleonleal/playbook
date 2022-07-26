@@ -1,30 +1,25 @@
 // 1. Creacion de un objeto
+let myCar = new Object(); // Creacion del objeto
+myCar.maker = 'Nissan'; // Guardando un valor dentro del objeto
+myCar.model = 'Rio';
+myCar.year = 1996;
 
-let myCar = new Object(); // Cracion de un objeto
-myCar.maker = 'Kia'; // Guardando un valor dentro del objeto creado
-myCar.model = 'Rio'; 
-myCar.year = 2018;
+console.log(myCar); // Imprimiendo un objeto
 
-console.log(myCar) // Imprimiendo un objeto
-
-// 2. Declaracion de un objeto con variables locales y publicas
-
+// 2. Declaracion de un objecto con variables locales y globales
 const myModule = (() => {
-
     // Variables de contexto local
-    const privateFoo = 'Soy un valor privado, solo me usan dentro de un objeto'
-    const privateBar = [1,2,3,4]
+    const privateFoo = 'Soy un valor privado, solo existo dentro de un objeto'
+    const privateBar = [1, 2, 3, 4, 5, 6]
     const baz = 'Soy un valor que va ser expuesto'
 
     // Variable para guardar las variables locales
     const exported = {
-        publicFoo: 'valor publico, pueden verme desde donde me llaman',
+        publicFoo: 'Valor publico, pueden verme desde donde me llaman',
         publicBar: 'Otro valor publico',
-            publicBaz: baz
+        publicBaz: baz
     }
-
     // Exposicion de variables locales
     return exported
 })()
-
-console.log(myModule)
+console.log(myModule);

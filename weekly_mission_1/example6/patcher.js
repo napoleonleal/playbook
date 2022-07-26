@@ -5,6 +5,6 @@
  *
  * En este caso estamos agregando una función más al objeto instanciado, no a la clase.
  * */
-require('./logger').customMessage = function () {
+require('./logger').customMessage = () => {
     console.log('This is a new functionality')
 }

@@ -1,10 +1,7 @@
-const Logger = require('./logger') // invocas el modulo que contiene la clase
+const Logger = require('./logger')
 
-// Creacion de un objeto
-const dbLogger = new Logger('DB') // Creas un objeto nuevo, esto llama por default el constructor de la clase
-// Invocacion del metodo
-dbLogger.info('This is an informational message')
+const dbLogger = new Logger("DB")
+dbLogger.info('This is and info message')
 
-// Creacion de otro objeto
 const accessLogger = new Logger('ACCESS')
-accessLogger.verbose('This is a verbose message')
+accessLogger.verbose('Verbose message')

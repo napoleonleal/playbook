@@ -1,13 +1,6 @@
 const logger = require('./logger')
+// we dont need to instiance the logger because un ./logger we already did
+logger.log('This an info message')
 
-// Ya se puede usar directamente el objeto instanciado en el módulo logger
-logger.log('This is an informational message')
-
-const customLogger = new logger.constructor('CUSTOM')
-customLogger.log('This is an informational message')
-
-/*
-También pueder instanciar uno nuevo de esta manera:
-  const customLogger = new logger.constructor('CUSTOM')
-  customLogger.log('This is an informational message')
-*/
+const customLogger = new logger.constructor("CUSTOM")
+customLogger.log('Info message from second class import instance')

@@ -1,9 +1,9 @@
 export default class MyPokemon {
-    constructor (name) {
+    constructor(name) {
         this.name = name
     }
 
-    sayHello (message) {
-        console.log(` Mi pokemon ${this.name} te saluda`)
+    sayHello() {
+        console.log(`Mi pokemon ${this.name} te saluda!!!`)
     }
 }
